@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>controllux</title>
+</head>
+<body>
+  <h1> Number One (+/- 1)</h1>
+  <button onclick="app.counter.send('UP', 1)">Up Num!</button>
+  <button onclick="app.counter.send('DOWN', 1)">Down Num!</button>
+  <h1 id="num"></h1>
+  <script src="reegux.min.js"></script>
+  <script>
+    const { bindActionsToStore } = Reegux
+
+    const appState = {number: 0}
+
+    const stateActions = {
+      UP: (state, num) => {
+        const newState   = Object.assign({}, state)
+        newState.number += 1
+        return newState
+      },
+      DOWN: (state, num) => {
+        const newState   = Object.assign({}, state)
+        newState.number -= 1
+        return newState
+      }
+    }
+
+    const render = newState => {
+      console.log(newState);
+      document.getElementById('num').innerHTML = newState.number
+    }
+
+    window.app = {}
+
+    window.app.counter = bindActionsToStore(
+      appState,
+      stateActions
+    )
+
+    window.app.counter.sub(render)
+  </script>
+</body>
+</html>
