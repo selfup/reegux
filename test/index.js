@@ -1,2 +1,3 @@
-require('./main-test.js')
+require('./dom-test.js')
+require('./logic-test.js')
 
