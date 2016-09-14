@@ -1,6 +1,6 @@
 # Reegux
 
-Here is an example of jsfiddle: https://jsfiddle.net/selfup/6fh16nu6/
+Here is an example on jsfiddle: https://jsfiddle.net/selfup/6fh16nu6/
 
 Very similar to Controllux:
 

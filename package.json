@@ -1,6 +1,6 @@
 {
   "name": "reegux",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Very simple Redux!",
   "main": "./lib/main.js",
   "scripts": {
