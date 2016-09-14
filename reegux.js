@@ -24,7 +24,6 @@ window.Reegux = {
             return 'please return a copy/clone';
           }
           this.state = newState;
-          debugger;
           if (this.render) this.render(this.State);
         }
       }, {

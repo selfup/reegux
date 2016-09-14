@@ -6,11 +6,12 @@ stages:
 pages:
   stage: deploy
   script:
+    - npm install
+    - npm run prep
     - mkdir .public
     - cp index.html .public
     - cp reegux.js .public
     - cp reegux.min.js .public
-    - cp reegux.min.compressed.js .public
     - mv .public public
   artifacts:
     paths:
