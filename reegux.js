@@ -24,7 +24,7 @@ window.Reegux = {
             return 'please return a copy/clone';
           }
           this.state = newState;
-          if (this.render) this.render(this.State);
+          if (this.render) this.render(this.state);
         }
       }, {
         key: 'sub',
